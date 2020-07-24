@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  
+  
+
+
+
+</head>
+
+<body>
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4Xj-DbYLHtBmZSev1a-eMgkJtfGcWUOrFyHrgDl1qUZE0WJYV_U_1tkTvwyOrVexfhnmFfztsADmz/pubhtml?gid=2000394361&amp;single=true&amp;widget=true&amp;headers=false" style="position: absolute; height: 100%; width: 100%; border: none"  >  </iframe>
+
+
+  <script>
+  
+  var arr=[10000,[300,[0,2,1000000],6],[9,100,115],90];
+
+  var bigNum = 0; //start off at zero will not work for only negative numbers in theory you could have first function to find the first number then go into find the biggest
+  
+  
+function myFunction(p1) {  
+
+	
+	
+  for (var i = 0; i < p1.length; i++){
+  
+	if (Array.isArray(p1[i])){
+		myFunction(p1[i]);
+		console.log(i);
+	} else if (p1[i]>bigNum){
+		bigNum = p1[i];
+		console.log(bigNum);
+	}
+  }
+
+return bigNum;
+
+
+  
+}
+
+console.log(myFunction(arr));  
+  </script>
+</body>
+</html>
